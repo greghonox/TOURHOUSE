@@ -22,7 +22,6 @@ class Sede(models.Model):
 class Departamento(models.Model):
     centro_custo = models.IntegerField(verbose_name='centro de custo')
     codigo_integracao = models.IntegerField(verbose_name='Integrações', choices=tipos_integracoes)
-    
 
     def get_codigo_integracao_display(self):
         return dict(tipos_integracoes)[self.codigo_integracao]

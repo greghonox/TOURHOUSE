@@ -17,6 +17,10 @@ GET {{server}}/funcionario/
 Authorization: {{token}}
 
 ###
+GET {{server}}/funcionario/?nome_completo=gregorio
+Authorization: {{token}}
+
+###
 POST {{server}}/funcionario/
 Authorization: {{token}}
 Content-Type: application/json
