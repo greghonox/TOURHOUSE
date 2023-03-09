@@ -94,3 +94,18 @@ Content-Type: application/json
     "centro_custo": 1,
     "codigo_integracao": 3
 }
+
+###
+PUT {{server}}/departamento/1/
+Authorization: {{token}}
+Content-Type: application/json
+
+{
+    "id": 1,
+    "centro_custo": 2,
+    "codigo_integracao": 3
+}
+
+###
+DELETE {{server}}/departamento/9/
+Authorization: {{token}}
