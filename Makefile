@@ -19,3 +19,6 @@ create-venv:
 install-requirements:
 	venv/bin/python3 -m pip install --upgrade pip
 	venv/bin/pip install -r requirements.txt
+
+tests:
+	venv/bin/python tourhouse/manage.py test core --force-color
