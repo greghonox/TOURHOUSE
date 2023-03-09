@@ -29,7 +29,10 @@ class Departamento(models.Model):
         
     def __str__(self):
         return f'{self.centro_custo} {self.get_codigo_integracao_display()}'
-    
+
+
+    class Meta:
+        unique_together = (('centro_custo', 'codigo_integracao'))
     
 class Funcionario(models.Model):
     nome_completo = models.CharField(verbose_name='nome completo', max_length=255)
