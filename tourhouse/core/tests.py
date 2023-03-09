@@ -10,12 +10,8 @@ class TestBase(APITestCase):
         self.client.login(username='greg', password='123')
         self.data = {'username': 'greg', 'first_name': 'Greg', 'last_name': 'hono'}
 
-    def login_token(self):
-        return self.client.post(
-            "/token/", data={"email": "greg@gmail.com", "password": "123"}
-        )
-
     def authentication(self):
+        print(f'Iniciando de {self} testes...')
         self.client = APIClient()
         self.client.force_authenticate(
             user=User.objects.get(email="greg@gmail.com")

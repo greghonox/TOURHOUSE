@@ -16,8 +16,9 @@ Content-Type: application/json
 GET {{server}}/funcionario/
 Authorization: {{token}}
 
+
 ###
-GET {{server}}/funcionario/?nome_completo=gregorio
+GET {{server}}/funcionario/?nome_completo=manoel
 Authorization: {{token}}
 
 ###
@@ -43,16 +44,19 @@ Content-Type: application/json
 {
     "data_ingresso": "2023-03-09",
     "nome_completo": "manoel henrique alterado",
-    "email": "123@gmail.com",
+    "email": "manoel@gmail.com",
     "telefone": "19992509911",
     "data_nascimento": "1988-12-24",
     "cidade": "campinas",
     "departamento_sede": 2    
 }
 
+
 ###
 DELETE {{server}}/funcionario/4/
 Authorization: {{token}}
+
+
 
 ###############################################################
 ### sede
@@ -65,14 +69,14 @@ Authorization: {{token}}
 Content-Type: application/json
 
 {
-    "cnpj": "1231231231231",
-    "logradouro": "rua 123",
-    "cidade": "Campinas",
+    "cnpj": "13212212000112",
+    "logradouro": "Olivio municipal",
+    "cidade": "Bragamca paulista",
     "pais": "brazil"
 }
 
 ###
-POST {{server}}/sede/
+PUT {{server}}/sede/1
 Authorization: {{token}}
 Content-Type: application/json
 
@@ -82,6 +86,11 @@ Content-Type: application/json
     "cidade": "Campinas",
     "pais": "brazil"
 }
+
+###
+DELETE  {{server}}/sede/1
+Authorization: {{token}}
+
 ###############################################################
 ### departamento
 GET {{server}}/departamento/
@@ -94,9 +103,8 @@ Authorization: {{token}}
 Content-Type: application/json
 
 {
-    "id": 2,
-    "centro_custo": 1,
-    "codigo_integracao": 3
+    "centro_custo": 5,
+    "codigo_integracao": 2
 }
 
 ###
@@ -105,9 +113,9 @@ Authorization: {{token}}
 Content-Type: application/json
 
 {
-    "id": 1,
+    "id": 2,
     "centro_custo": 2,
-    "codigo_integracao": 3
+    "codigo_integracao": 5
 }
 
 ###
