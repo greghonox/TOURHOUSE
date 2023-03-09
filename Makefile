@@ -6,7 +6,7 @@ migrate_db:
 	venv/bin/python tourhouse/manage.py migrate	
 
 restart_db:
-	rm db.sqlite3
+	rm tourhouse/db.sqlite3
 	make migrate_db
 	venv/bin/python tourhouse/manage.py createsuperuser
 
